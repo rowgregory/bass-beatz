@@ -28,20 +28,19 @@ class App extends Component {
         if(!accessToken)
             return;
 
+
+
         fetch('https://api.spotify.com/v1/me', {headers:  {
             'Authorization': 'Bearer ' + accessToken }}
         ).then(response => response.json())
         .then(jsonresponse => 
-        //    {console.log(jsonresponse)}
-            
-            this.setState({
-            user: {
-                name: jsonresponse.display_name,
-                
-                image: jsonresponse.images[0].url
-            }   
-            
-            })
+
+
+        jsonresponse.images.length >= 1
+        ? this.setState({ user: { image: jsonresponse.images[0].url, name:jsonresponse.display_name }})
+        : this.setState({ user: { image:null, name: jsonresponse.display_name }})
+    
+        
         
         )
         
@@ -160,10 +159,11 @@ class App extends Component {
                         <h1 className="user-info" style={{'color': 'white'}}>
                             {this.state.user.name}  
                         </h1>
-                        
+                        { this.state.user.image !== null ?
                         <img 
                             className="user-pic"
                             alt="user-profilePic"
+                            
                             src={this.state.user.image}
                             style={{
                                 'height': '120px',
@@ -171,8 +171,8 @@ class App extends Component {
                                 'border': '3px solid white'
                             }}
                         />
-                        
-                        
+                        : <div></div>
+                        }
                         <div 
                             className="App-title">
                             bassBeatz

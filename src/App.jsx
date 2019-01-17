@@ -220,7 +220,7 @@ class App extends Component {
                         }
                         </div> : <button 
                                     onClick={ () => {
-                                        window.location = window.location.includes('localhost') 
+                                        window.location = window.location.href.includes('localhost') 
                                             ? 'http://localhost:8888/login' 
                                             : 'https://lit-bayou-49280.herokuapp.com/login'
                                     }}

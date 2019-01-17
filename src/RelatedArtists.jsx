@@ -22,7 +22,7 @@ class RelatedArtists extends Component{
         console.log('Artist Index: ',  indexOfArtist);
         console.log('this.props.related_artists', this.props.related_artists) 
 
-        let listofArtists = this.props.related_artists;
+        // let listofArtists = this.props.related_artists;
 
         // console.log('Length of artists array', listofArtists.length);
         if(this.state.clicked.indexOf(switchArtist)===-1){
@@ -30,13 +30,13 @@ class RelatedArtists extends Component{
         }  
         
 
-        listofArtists.map((makeaMatch, k) => {
+        // listofArtists.map((makeaMatch, k) => {
             // console.log('Artist: ', makeaMatch);
 
             // console.log('index value: ', k);
             // console.log('Artist id: ', makeaMatch.id)  
             
-        }) 
+        // }) 
         
     }
 

@@ -3,13 +3,14 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "machinepack-spotify": "0.0.3",
+    "node-spotify-api": "^1.0.7",
+    "query-string": "^6.2.0",
     "react": "^16.7.0",
     "react-bootstrap": "^0.32.4",
     "react-dom": "^16.7.0",
     "react-scripts": "2.1.3",
     "spotify-web-api-js": "^1.1.1",
-    "machinepack-spotify": "0.0.3",
-    "node-spotify-api": "^1.0.7",
     "spotify-web-api-node": "^2.5.0"
   },
   "scripts": {
